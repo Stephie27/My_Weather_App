@@ -1,0 +1,49 @@
+function enterCity(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+  let h1 = document.querySelector("#current-city");
+  h1.innerHTML = searchInput.value;
+  //let apiKey = "dbc80t431e2275e57a3b2912ao37a0f9";
+
+  //let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchInputElement.value}&key=${apiKey}&units=metric`;
+
+  //axios.get(apiUrl).then(displayTemp);
+}
+
+let enterCities = document.querySelector("#search-button");
+enterCities = addEventListener("submit", enterCity);
+
+//function displayTemp(response) {
+//let temperatureElement = document.querySelector(".temperature-num");
+//let temperature = Math.round(response.data.temperature.current);
+//temperatureElement.innerHTML = temperature;
+//let cityElement = document.querySelector(".current-city");
+//cityElement.innerHTML = response.data.city;
+//}
+
+function time() {
+  return `${day}, ${hours}:${minutes}`;
+}
+let now = new Date();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+let hours = now.getHours();
+
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+let span = document.querySelector("#current-time");
+span.innerHTML = time(span);

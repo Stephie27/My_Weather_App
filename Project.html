@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="SRC/Style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="weather-app">
+      <header>
+        <form action="">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Enter a city"
+            required
+            class="search-input"
+          />
+          <input type="submit" value="Search" class="button" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Johannesburg</h1>
+
+            <p class="current-details">
+              <span id="current-time">Saturday 20:37</span>, Partly Cloudy
+              <br />
+              Humidity <strong>62%</strong>, Wind <strong>3km/h</strong>
+            </p>
+          </div>
+
+          <div class="temperature">
+            <span class="temperature-icon">🌤️</span>
+            <span class="temperature-num">21</span>
+            <span class="temperature-sym">°C</span>
+          </div>
+
+          <ul>
+            <li>Sun 🌤️ <br /><strong>27°C</strong> - 18°C</li>
+            <li>
+              Mon ⛅ <br />
+              <strong>27°C</strong> - 17°C
+            </li>
+            <li>Tue 🌦️ <br /><strong>27°C</strong> - 17°C</li>
+            <li>
+              Wed 🌦️ <br />
+              <strong>28°C</strong> - 16°C
+            </li>
+            <li>
+              Thu ⛈️ <br />
+              <strong>23°C</strong> - 15°C
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Project was coded by
+          <a href="" target="_blank">Stephanie Yoshwa</a> and
+          <a href="" target="_blank">open sourced on GitHub</a> and
+          <a href="" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+    <script src="SRC/app.js"></script>
+  </body>
+</html>
