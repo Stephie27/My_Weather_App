@@ -20,6 +20,9 @@ footer {
   padding-top: 15px;
   color: rgba(39, 33, 66, 0.4);
 }
+a {
+  color: #885df1;
+}
 
 .weather-app {
   background: white;
@@ -73,19 +76,18 @@ footer {
 }
 .temperature {
   font-size: 48px;
+  display: flex;
 }
 .temperature-icon {
-  position: relative;
-  top: -8px;
-  margin-right: 10px;
+  margin-top: 22px;
   font-size: 40px;
 }
 .temperature-num {
   font-size: 80px;
   font-weight: 700;
+  margin-left: 10px;
 }
 .temperature-sym {
-  position: relative;
+  margin-top: 16px;
   font-size: 30px;
-  top: -38px;
 }
