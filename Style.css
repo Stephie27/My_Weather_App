@@ -79,12 +79,13 @@ a {
   display: flex;
 }
 .temperature-icon {
-  margin-top: 22px;
-  font-size: 40px;
+  width: 75px;
+  height: 75px;
 }
 .temperature-num {
-  font-size: 80px;
+  font-size: 75px;
   font-weight: 700;
+  line-height: 75px;
   margin-left: 10px;
 }
 .temperature-sym {

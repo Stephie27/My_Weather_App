@@ -30,6 +30,14 @@ function displayTemp(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   let timeElement = document.querySelector("#current-time");
   timeElement.innerHTML = time();
+
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = ` <img
+                src= "${response.data.condition.icon_url}"
+              
+                class="temperature-icon"
+              />`;
 }
 
 function time() {
