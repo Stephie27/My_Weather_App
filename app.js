@@ -19,6 +19,17 @@ function displayTemp(response) {
   temperatureElement.innerHTML = temperature;
   let cityElement = document.querySelector(".current-city");
   cityElement.innerHTML = response.data.city;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+  let windSpeedElement = document.querySelector("#wind-speed");
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  let timeElement = document.querySelector("#current-time");
+  timeElement.innerHTML = time();
 }
 
 function time() {
@@ -45,5 +56,3 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
-let span = document.querySelector("#current-time");
-span.innerHTML = time(span);
