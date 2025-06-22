@@ -38,9 +38,17 @@ function displayTemp(response) {
               
                 class="temperature-icon"
               />`;
+
+  getForecast(response.data.city);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "dbc80t431e2275e57a3b2912ao37a0f9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query={query}=${city}&key=${apiKey}`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
