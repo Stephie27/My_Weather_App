@@ -40,6 +40,30 @@ function displayTemp(response) {
               />`;
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-temps">
+      <div class="weather-forecast-temp"><strong>27°C</strong></div>
+
+      <div class="weather-forecast-temp">18°C</div>
+    </div> 
+    </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
+
 function time() {
   return `${day}, ${hours}:${minutes}`;
 }
