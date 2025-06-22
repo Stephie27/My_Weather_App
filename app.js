@@ -51,8 +51,8 @@ function formatDay(timestamp) {
 
 function getForecast(city) {
   let apiKey = "dbc80t431e2275e57a3b2912ao37a0f9";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(displayForecast);
+  let apiUrll = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrll).then(displayForecast);
 }
 
 function displayForecast(response) {
@@ -107,3 +107,4 @@ let minutes = now.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+enterCity("Johannesburg");
